@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Wishlist</title>
+  <link rel="stylesheet" href="style.css" />
+
+</head>
+
+<body>
+
+  <header class="topbar">
+  <h1>Moja Wishlist</h1>
+
+  <div class="filter-block">
+    <div class="filter-title">Kategorie</div>
+    <nav class="filters" id="groupFilters">
+      <button class="chip group-filter is-active" data-group="all">Wszystkie</button>
+      <button class="chip group-filter" data-group="skincare">Skin care</button>
+      <button class="chip group-filter" data-group="makeup">Makeup</button>
+      <button class="chip group-filter" data-group="perfumy">Perfumy</button>
+    </nav>
+  </div>
+
+  <div class="filter-block">
+    <div class="filter-title">Marki</div>
+    <nav class="filters" id="brandFilters">
+      <!-- JS tu wstawi przyciski marek -->
+    </nav>
+  </div>
+
+</header>
+
+
+  <main class="container">
+    <section id="grid" class="grid"></section>
+  </main>
+
+  <script src="app.js"></script>
+
+</body>
+</html>
