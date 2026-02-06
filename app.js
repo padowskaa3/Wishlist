@@ -1,7 +1,5 @@
-alert("app.js działa");
-
-let activeBrand = "all";
-let activeGroup = "all";
+let activeBrand = null;
+let activeGroup = null;
 
 const products = [
   {
@@ -39,6 +37,42 @@ const products = [
 const grid = document.getElementById("grid");
 const groupButtons = document.querySelectorAll(".group-filter");
 const brandFilters = document.getElementById("brandFilters");
+
+const toggleCategories = document.getElementById("toggleCategories");
+const toggleBrands = document.getElementById("toggleBrands");
+const panelCategories = document.getElementById("panelCategories");
+const panelBrands = document.getElementById("panelBrands");
+
+let openPanel = null; // "categories" | "brands" | null
+
+function setOpenPanel(which) {
+  openPanel = (openPanel === which) ? null : which;
+
+  panelCategories.classList.toggle("is-hidden", openPanel !== "categories");
+  panelBrands.classList.toggle("is-hidden", openPanel !== "brands");
+
+  toggleCategories.classList.toggle("is-active", openPanel === "categories");
+  toggleBrands.classList.toggle("is-active", openPanel === "brands");
+}
+
+toggleCategories.addEventListener("click", () => {
+  activeGroup = "all";
+  activeBrand = "all";
+  setActiveGroupButton();
+  setActiveBrandButton();
+  applyFilters();
+  setOpenPanel("categories");
+});
+
+
+toggleBrands.addEventListener("click", () => {
+  activeGroup = "all";
+  activeBrand = "all";
+  setActiveGroupButton();
+  setActiveBrandButton();
+  applyFilters();
+  setOpenPanel("brands");
+});
 
 
 function render(list) {
@@ -126,3 +160,8 @@ renderBrandFilters();
 setActiveBrandButton();
 setActiveGroupButton();
 applyFilters();
+setOpenPanel(null);
+setActiveBrandButton();
+setActiveGroupButton();
+applyFilters();
+
