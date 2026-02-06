@@ -69,3 +69,86 @@ body {
   color: #555;
   font-size: 13px;
 }
+
+/* --- APP-STYLE CHIPS (na dole pliku, żeby nadpisało stare style) --- */
+
+.chip,
+.filter {
+  padding: 8px 16px;
+  border-radius: 999px;
+  border: 1px solid #e5e5e5;
+  background: white;
+  font-size: 14px;
+  cursor: pointer;
+
+  transition: all 0.2s ease;
+
+  /* delikatny cień */
+  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+}
+
+.chip:hover,
+.filter:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+}
+
+.chip.is-active,
+.filter.is-active {
+  background: black;
+  color: white;
+  border-color: black;
+}
+
+.chip:active,
+.filter:active {
+  transform: scale(0.97);
+}
+
+.top-toggles {
+  display: flex;
+  gap: 10px;
+  margin-top: 12px;
+}
+
+.panel {
+  margin-top: 12px;
+  padding: 12px;
+  border-radius: 16px;
+  background: rgba(0,0,0,0.03);
+}
+
+.panel.is-hidden {
+  display: none;
+}
+
+/* ===== HEADER / HERO STYLE ===== */
+
+.topbar {
+  padding: 32px 20px 24px;
+}
+
+.header-text {
+  max-width: 720px;
+}
+
+.title-main {
+  font-size: 36px;
+  font-weight: 600;
+  letter-spacing: -0.5px;
+  margin-bottom: 14px;
+}
+
+.wishlist-description {
+  font-size: 15px;
+  line-height: 1.6;
+  color: #555;
+  text-align: justify;
+  text-justify: inter-word;
+}
+
+.title-main {
+  background: linear-gradient(90deg, #000, #444);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
