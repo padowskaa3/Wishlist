@@ -161,7 +161,5 @@ setActiveBrandButton();
 setActiveGroupButton();
 applyFilters();
 setOpenPanel(null);
-setActiveBrandButton();
-setActiveGroupButton();
-applyFilters();
+
 
