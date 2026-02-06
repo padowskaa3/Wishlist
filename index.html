@@ -13,10 +13,25 @@
 <body>
 
   <header class="topbar">
-  <h1>Moja Wishlist</h1>
 
-  <div class="filter-block">
-    <div class="filter-title">Kategorie</div>
+  <div class="header-text">
+    <h1 class="title-main">Moja Wishlist</h1>
+
+    <p class="wishlist-description">
+      Ta lista zawiera dokładnie te produkty, które naprawdę chcę mieć — w tych konkretnych wersjach, kolorach i wariantach.  
+      Jeśli coś tu jest, to znaczy, że zostało starannie wybrane (czasem po długim researchu :D). 
+      Nie szukam zamienników, podobnych produktów ani innych wersji, zapachowych czy kolorystycznych.  
+      Jeśli produkt jest na liście, to właśnie ten jest tym właściwym.
+    </p>
+  </div>
+
+  <div class="top-toggles">
+    <button id="toggleCategories" class="chip">Kategorie</button>
+    <button id="toggleBrands" class="chip">Marki</button>
+  </div>
+
+  <!-- PANEL: Kategorie -->
+  <div id="panelCategories" class="panel is-hidden">
     <nav class="filters" id="groupFilters">
       <button class="chip group-filter is-active" data-group="all">Wszystkie</button>
       <button class="chip group-filter" data-group="skincare">Skin care</button>
@@ -25,15 +40,13 @@
     </nav>
   </div>
 
-  <div class="filter-block">
-    <div class="filter-title">Marki</div>
+  <!-- PANEL: Marki -->
+  <div id="panelBrands" class="panel is-hidden">
     <nav class="filters" id="brandFilters">
       <!-- JS tu wstawi przyciski marek -->
     </nav>
   </div>
-
-</header>
-
+  </header>
 
   <main class="container">
     <section id="grid" class="grid"></section>
